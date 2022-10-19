@@ -33,12 +33,12 @@ int8_t encoder_lut[] = {
 #define ENCODE_LOWER_NIBBLE(n) (encoder_lut[(n) & 0x0F])
 #define ENCODE_UPPER_NIBBLE(n) (encoder_lut[((n) & 0xF0 ) >> 4 ])
 
-inline uint8_t lhc_encode_nibble(uint8_t n)
+uint8_t lhc_encode_nibble(uint8_t n)
 {
     return ENCODE_LOWER_NIBBLE(n);
 }
 
-inline uint16_t lhc_encode_byte(uint8_t b)
+uint16_t lhc_encode_byte(uint8_t b)
 {
     return ( ENCODE_UPPER_NIBBLE(b) << 8 ) | ENCODE_LOWER_NIBBLE(b);
 }

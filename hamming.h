@@ -19,7 +19,7 @@
  * @param n the nibble to be encoded
  * @return uint8_t the encoded value
  */
-inline uint8_t lhc_encode_nibble(uint8_t n);
+uint8_t lhc_encode_nibble(uint8_t n);
 
 /**
  * @brief Encode one byte into 16 bits
@@ -27,7 +27,7 @@ inline uint8_t lhc_encode_nibble(uint8_t n);
  * @param b the byte to be encoded
  * @return uint16_t the encoded value; bits 0-7 encode the lower half of b, and bits 8-15 encode the upper half
  */
-inline uint16_t lhc_encode_byte(uint8_t b);
+uint16_t lhc_encode_byte(uint8_t b);
 
 /**
  * @brief Encode a buffer of data
